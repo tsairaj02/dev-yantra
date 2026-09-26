@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dev Yantra
 
-## Getting Started
+Dev Yantra is a growing collection of fast, simple, browser-based developer utilities — no sign-up, no backend, just tools that do exactly what they say.
 
-First, run the development server:
+**Live site:** _add your Vercel URL here after deploying_
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
+## Available tools
+
+- **CSS Box Shadow Generator** — build and preview CSS `box-shadow` values with live controls for offset, blur, spread, color, opacity, and inset, then copy the generated CSS.
+
+More utilities (JSON tools, HTML tools, regex tools, converters, formatters, and more) are planned and will be added incrementally.
+
+## Tech stack
+
+- [Next.js](https://nextjs.org/) (App Router) + TypeScript
+- [Tailwind CSS](https://tailwindcss.com/) v4
+- [Vitest](https://vitest.dev/) + [Testing Library](https://testing-library.com/) for testing
+- [pnpm](https://pnpm.io/) as the package manager
+- Deployed on [Vercel](https://vercel.com/)
+
+## Getting started
+
+Clone the repo and install dependencies:
+
+\`\`\`bash
+git clone https://github.com/tsairaj02/dev-yantra.git
+cd dev-yantra
+pnpm install
+\`\`\`
+
+Run the development server:
+
+\`\`\`bash
 pnpm dev
-# or
-bun dev
-```
+\`\`\`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+| --- | --- |
+| `pnpm dev` | Start the development server |
+| `pnpm build` | Create a production build |
+| `pnpm start` | Run the production build locally |
+| `pnpm test` | Run the test suite |
+| `pnpm lint` | Run ESLint |
 
-## Learn More
+## Project structure
 
-To learn more about Next.js, take a look at the following resources:
+\`\`\`
+src/
+  app/              # Routes (App Router)
+    tools/          # Individual utility pages
+  components/
+    layout/         # Header, footer, shared layout pieces
+    tools/          # UI for each utility
+  lib/
+    tools/          # Pure logic for each utility (framework-agnostic)
+\`\`\`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT

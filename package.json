@@ -2,6 +2,21 @@
   "name": "dev-yantra",
   "version": "0.1.0",
   "private": true,
+  "description": "Dev Yantra — a growing collection of fast, simple, browser-based developer utilities: CSS generators, JSON tools, formatters, converters, and more.",
+  "keywords": [
+    "developer-tools",
+    "css-generator",
+    "box-shadow",
+    "nextjs",
+    "utilities"
+  ],
+  "author": "Sairaj Thota",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tsairaj02/dev-yantra.git"
+  },
+  "homepage": "https://github.com/tsairaj02/dev-yantra#readme",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
