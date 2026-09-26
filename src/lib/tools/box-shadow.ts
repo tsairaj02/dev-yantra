@@ -1,3 +1,7 @@
+import { clamp } from "./shared";
+
+export { clamp };
+
 export type BoxShadowState = {
   offsetX: number;
   offsetY: number;
@@ -40,11 +44,6 @@ export function hexToRgb(
     g: parseInt(expanded.slice(2, 4), 16),
     b: parseInt(expanded.slice(4, 6), 16),
   };
-}
-
-export function clamp(value: number, min: number, max: number): number {
-  if (Number.isNaN(value)) return min;
-  return Math.min(max, Math.max(min, value));
 }
 
 export function generateBoxShadowCSS(state: BoxShadowState): string {

@@ -1,12 +1,13 @@
 "use client";
 
-import { useId, useState } from "react";
+import { useState } from "react";
 import {
   type BoxShadowState,
   DEFAULT_BOX_SHADOW,
   clamp,
   generateBoxShadowCSS,
 } from "@/lib/tools/box-shadow";
+import { NumberSliderField } from "./number-slider-field";
 
 type NumericField = "offsetX" | "offsetY" | "blur" | "spread" | "opacity";
 
@@ -54,14 +55,20 @@ export function BoxShadowGenerator() {
   return (
     <div className="flex flex-col gap-8 lg:flex-row">
       <div className="flex flex-1 flex-col gap-6">
-        {(Object.keys(FIELD_CONFIG) as NumericField[]).map((field) => (
-          <NumberSliderField
-            key={field}
-            field={field}
-            value={state[field]}
-            onChange={(value) => updateNumericField(field, value)}
-          />
-        ))}
+        {(Object.keys(FIELD_CONFIG) as NumericField[]).map((field) => {
+          const { label, min, max, unit } = FIELD_CONFIG[field];
+          return (
+            <NumberSliderField
+              key={field}
+              label={label}
+              min={min}
+              max={max}
+              unit={unit}
+              value={state[field]}
+              onChange={(value) => updateNumericField(field, value)}
+            />
+          );
+        })}
 
         <div className="flex flex-col gap-1.5">
           <label htmlFor="shadow-color" className="text-sm font-medium">
@@ -140,53 +147,6 @@ export function BoxShadowGenerator() {
                 : ""}
           </p>
         </div>
-      </div>
-    </div>
-  );
-}
-
-function NumberSliderField({
-  field,
-  value,
-  onChange,
-}: {
-  field: NumericField;
-  value: number;
-  onChange: (value: number) => void;
-}) {
-  const id = useId();
-  const { label, min, max, unit } = FIELD_CONFIG[field];
-
-  return (
-    <div className="flex flex-col gap-1.5">
-      <div className="flex items-center justify-between">
-        <label htmlFor={id} className="text-sm font-medium">
-          {label}
-        </label>
-        <span className="text-sm text-zinc-600 dark:text-zinc-400">
-          {value}
-          {unit}
-        </span>
-      </div>
-      <div className="flex items-center gap-3">
-        <input
-          id={id}
-          type="range"
-          min={min}
-          max={max}
-          value={value}
-          onChange={(e) => onChange(Number(e.target.value))}
-          className="flex-1"
-        />
-        <input
-          type="number"
-          min={min}
-          max={max}
-          value={value}
-          onChange={(e) => onChange(Number(e.target.value))}
-          aria-label={`${label} (${unit}) number input`}
-          className="w-20 rounded border border-black/[.08] px-2 py-1 text-sm dark:border-white/[.145] dark:bg-transparent"
-        />
       </div>
     </div>
   );

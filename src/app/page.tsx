@@ -16,15 +16,26 @@ export default function Home() {
 
       <section className="mt-12 flex flex-col gap-4">
         <h2 className="text-xl font-semibold tracking-tight">Tools</h2>
-        <Link
-          href="/tools/box-shadow-generator"
-          className="flex flex-col gap-1 rounded-lg border border-black/[.08] p-4 transition-colors hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-white/[.08] sm:max-w-sm"
-        >
-          <span className="font-medium">CSS Box Shadow Generator</span>
-          <span className="text-sm text-zinc-600 dark:text-zinc-400">
-            Build and copy box-shadow CSS with a live preview.
-          </span>
-        </Link>
+        <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+          <Link
+            href="/tools/box-shadow-generator"
+            className="flex flex-col gap-1 rounded-lg border border-black/[.08] p-4 transition-colors hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-white/[.08] sm:max-w-sm sm:flex-1"
+          >
+            <span className="font-medium">CSS Box Shadow Generator</span>
+            <span className="text-sm text-zinc-600 dark:text-zinc-400">
+              Build and copy box-shadow CSS with a live preview.
+            </span>
+          </Link>
+          <Link
+            href="/tools/border-radius-generator"
+            className="flex flex-col gap-1 rounded-lg border border-black/[.08] p-4 transition-colors hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-white/[.08] sm:max-w-sm sm:flex-1"
+          >
+            <span className="font-medium">CSS Border Radius Generator</span>
+            <span className="text-sm text-zinc-600 dark:text-zinc-400">
+              Build and copy border-radius CSS with a live preview.
+            </span>
+          </Link>
+        </div>
       </section>
     </div>
   );
