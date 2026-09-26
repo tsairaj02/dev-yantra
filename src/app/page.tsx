@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="mx-auto flex w-full max-w-5xl flex-1 flex-col px-6 py-16">
@@ -14,9 +16,15 @@ export default function Home() {
 
       <section className="mt-12 flex flex-col gap-4">
         <h2 className="text-xl font-semibold tracking-tight">Tools</h2>
-        <p className="text-zinc-600 dark:text-zinc-400">
-          No tools published yet. The first one is on its way.
-        </p>
+        <Link
+          href="/tools/box-shadow-generator"
+          className="flex flex-col gap-1 rounded-lg border border-black/[.08] p-4 transition-colors hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-white/[.08] sm:max-w-sm"
+        >
+          <span className="font-medium">CSS Box Shadow Generator</span>
+          <span className="text-sm text-zinc-600 dark:text-zinc-400">
+            Build and copy box-shadow CSS with a live preview.
+          </span>
+        </Link>
       </section>
     </div>
   );
