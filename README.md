@@ -2,7 +2,7 @@
 
 Dev Yantra is a growing collection of fast, simple, browser-based developer utilities - no sign-up, no backend, just tools that do exactly what they say.
 
-**Live site:** _add your Vercel URL here after deploying_
+**Live site:** [dev-yantra.vercel.app](https://dev-yantra.vercel.app)
 
 ## Available tools
 
