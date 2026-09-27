@@ -58,6 +58,12 @@ export const CATEGORIES: Category[] = [
             description:
               "Build and copy CSS filter effects with a live visual preview.",
           },
+          {
+            slug: "flexbox-generator",
+            name: "CSS Flexbox Generator",
+            description:
+              "Visually configure Flexbox container properties with a live multi-item preview.",
+          },
         ],
       },
     ],

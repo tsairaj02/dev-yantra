@@ -11,6 +11,7 @@ Dev Yantra is a growing collection of fast, simple, browser-based developer util
 - **CSS Gradient Generator** - build and preview linear or radial CSS gradients with multiple color stops, then copy the generated CSS.
 - **CSS Text Shadow Generator** - build and preview CSS `text-shadow` values with live text preview, then copy the generated CSS.
 - **CSS Filter Generator** - build and preview CSS `filter` effects (blur, brightness, contrast, grayscale, hue-rotate, invert, saturate, sepia) with a live visual preview, then copy the generated CSS.
+- **CSS Flexbox Generator** - visually configure Flexbox container properties (direction, wrap, alignment, gap) with a live multi-item preview, then copy the generated CSS.
 
 More utilities (JSON tools, HTML tools, regex tools, converters, formatters, and more) are planned and will be added incrementally.
 
