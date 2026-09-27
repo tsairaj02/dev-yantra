@@ -46,6 +46,12 @@ export const CATEGORIES: Category[] = [
             description:
               "Build and copy linear or radial gradient CSS with a live preview.",
           },
+          {
+            slug: "text-shadow-generator",
+            name: "CSS Text Shadow Generator",
+            description:
+              "Build and copy text-shadow CSS with a live text preview.",
+          },
         ],
       },
     ],
