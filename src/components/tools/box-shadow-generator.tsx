@@ -54,7 +54,7 @@ export function BoxShadowGenerator() {
 
   return (
     <div className="flex flex-col gap-8 lg:flex-row">
-      <div className="flex flex-1 flex-col gap-6">
+      <div className="flex min-w-0 flex-1 flex-col gap-6">
         {(Object.keys(FIELD_CONFIG) as NumericField[]).map((field) => {
           const { label, min, max, unit } = FIELD_CONFIG[field];
           return (
@@ -113,7 +113,7 @@ export function BoxShadowGenerator() {
         </button>
       </div>
 
-      <div className="flex flex-1 flex-col gap-4">
+      <div className="flex min-w-0 flex-1 flex-col gap-4">
         <div className="flex min-h-[220px] flex-1 items-center justify-center rounded-lg bg-zinc-100 dark:bg-zinc-900">
           <div
             className="h-32 w-32 rounded-lg bg-white dark:bg-zinc-800"
@@ -132,7 +132,7 @@ export function BoxShadowGenerator() {
               {copyStatus === "copied" ? "Copied!" : "Copy"}
             </button>
           </div>
-          <pre className="overflow-x-auto rounded-lg bg-zinc-100 p-4 font-mono text-sm dark:bg-zinc-900">
+          <pre className="code-scroll overflow-x-auto rounded-lg bg-zinc-100 p-4 font-mono text-sm dark:bg-zinc-900">
             {declaration}
           </pre>
           <p

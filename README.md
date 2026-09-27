@@ -8,6 +8,7 @@ Dev Yantra is a growing collection of fast, simple, browser-based developer util
 
 - **CSS Box Shadow Generator** - build and preview CSS `box-shadow` values with live controls for offset, blur, spread, color, opacity, and inset, then copy the generated CSS.
 - **CSS Border Radius Generator** - build and preview CSS `border-radius` values with linked or independent corner controls, then copy the generated CSS.
+- **CSS Gradient Generator** - build and preview linear or radial CSS gradients with multiple color stops, then copy the generated CSS.
 
 More utilities (JSON tools, HTML tools, regex tools, converters, formatters, and more) are planned and will be added incrementally.
 

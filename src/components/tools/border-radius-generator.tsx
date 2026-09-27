@@ -141,7 +141,7 @@ export function BorderRadiusGenerator() {
               {copyStatus === "copied" ? "Copied!" : "Copy"}
             </button>
           </div>
-          <pre className="overflow-x-auto rounded-lg bg-zinc-100 p-4 font-mono text-sm dark:bg-zinc-900">
+          <pre className="code-scroll overflow-x-auto rounded-lg bg-zinc-100 p-4 font-mono text-sm dark:bg-zinc-900">
             {declaration}
           </pre>
           <p
