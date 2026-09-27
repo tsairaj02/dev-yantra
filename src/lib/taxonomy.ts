@@ -64,6 +64,12 @@ export const CATEGORIES: Category[] = [
             description:
               "Visually configure Flexbox container properties with a live multi-item preview.",
           },
+          {
+            slug: "grid-generator",
+            name: "CSS Grid Generator",
+            description:
+              "Visually configure Grid container properties with a live multi-item preview.",
+          },
         ],
       },
     ],
