@@ -52,6 +52,12 @@ export const CATEGORIES: Category[] = [
             description:
               "Build and copy text-shadow CSS with a live text preview.",
           },
+          {
+            slug: "filter-generator",
+            name: "CSS Filter Generator",
+            description:
+              "Build and copy CSS filter effects with a live visual preview.",
+          },
         ],
       },
     ],
