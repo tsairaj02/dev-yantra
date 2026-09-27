@@ -24,7 +24,7 @@ export function SelectField<T extends string>({
         id={id}
         value={value}
         onChange={(e) => onChange(e.target.value as T)}
-        className="rounded border border-black/[.08] bg-transparent px-2 py-1.5 text-sm dark:border-white/[.145] dark:bg-transparent"
+        className="[color-scheme:light] rounded border border-black/[.08] bg-white px-2 py-1.5 text-sm text-zinc-900 dark:[color-scheme:dark] dark:border-white/[.145] dark:bg-zinc-900 dark:text-zinc-50"
       >
         {options.map((option) => (
           <option key={option.value} value={option.value}>
