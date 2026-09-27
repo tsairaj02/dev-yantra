@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { BorderRadiusGenerator } from "@/components/tools/border-radius-generator";
+import { ToolBreadcrumb } from "@/components/layout/tool-breadcrumb";
 
 export const metadata: Metadata = {
-  title: "CSS Border Radius Generator — Dev Yantra",
+  title: "CSS Border Radius Generator - Dev Yantra",
   description:
     "Generate CSS border-radius values visually with a live preview. Link or adjust individual corners, then copy the CSS.",
 };
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
 export default function BorderRadiusGeneratorPage() {
   return (
     <div className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-8 px-6 py-16">
+      <ToolBreadcrumb toolSlug="border-radius-generator" />
       <div className="flex flex-col gap-2">
         <h1 className="text-3xl font-semibold tracking-tight">
           CSS Border Radius Generator

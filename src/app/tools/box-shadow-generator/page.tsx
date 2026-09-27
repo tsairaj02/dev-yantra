@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { BoxShadowGenerator } from "@/components/tools/box-shadow-generator";
+import { ToolBreadcrumb } from "@/components/layout/tool-breadcrumb";
 
 export const metadata: Metadata = {
-  title: "CSS Box Shadow Generator — Dev Yantra",
+  title: "CSS Box Shadow Generator - Dev Yantra",
   description:
     "Generate CSS box-shadow values visually with a live preview. Adjust offset, blur, spread, color, and opacity, then copy the CSS.",
 };
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
 export default function BoxShadowGeneratorPage() {
   return (
     <div className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-8 px-6 py-16">
+      <ToolBreadcrumb toolSlug="box-shadow-generator" />
       <div className="flex flex-col gap-2">
         <h1 className="text-3xl font-semibold tracking-tight">
           CSS Box Shadow Generator

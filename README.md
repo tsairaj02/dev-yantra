@@ -52,12 +52,14 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ```
 src/
-  app/              # Routes (App Router)
+  app/
+    categories/     # Category and subcategory listing pages
     tools/          # Individual utility pages
   components/
-    layout/         # Header, footer, shared layout pieces
+    layout/         # Header, footer, breadcrumb/back navigation
     tools/          # UI for each utility
   lib/
+    taxonomy.ts     # Category -> subcategory -> tool structure and lookups
     tools/          # Pure logic for each utility (framework-agnostic)
 ```
 

@@ -9,4 +9,10 @@ describe("Home page", () => {
       screen.getByText("Developer tools that just work."),
     ).toBeInTheDocument();
   });
+
+  it("renders a link to the Web & Design category", () => {
+    render(<Home />);
+    const link = screen.getByRole("link", { name: /Web & Design/i });
+    expect(link).toHaveAttribute("href", "/categories/web-design");
+  });
 });
